@@ -91,6 +91,6 @@ for m_id = 1:n_models;
         model_test_mae = national_mae(m, Y_test, t_test, population, X_vote_test, X_muni, n_test_runs);
 
         fprintf('Saving %s results...\n', m_name);
-        save(results_file, 'model_test_mae', 'obs');
+        save(national_results_filename, 'model_test_mae', 'obs');
     end
 end
