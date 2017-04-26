@@ -28,7 +28,7 @@ classdef model_mf_gp_r < handle
     end
     
     methods
-        function m = model_gp_vu(hyp, V, sn2)
+        function m = model_mf_gp_r(hyp, V, sn2)
             m.lik = {@likGauss};
             [m.mean, m.cov] = m.get_mean_cov();
             [m.hyp.lik, m.hyp.mean, m.hyp.cov, m.hyp.L] = m.get_hyperparameters(hyp);
