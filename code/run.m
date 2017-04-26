@@ -88,7 +88,7 @@ for m_id = 1:n_models;
 
     if exist(national_results_filename, 'file') ~= 2
         fprintf('Computing %s national results...\n', m_name);
-        model_test_mae = national_mae(m, Y_test, t_test, population, X_vote_test, X_muni, n_test_runs);
+        [model_test_mae, obs] = national_mae(m, Y_test, t_test, population, X_vote_test, X_muni, n_test_runs);
 
         fprintf('Saving %s results...\n', m_name);
         save(national_results_filename, 'model_test_mae', 'obs');
