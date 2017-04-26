@@ -52,7 +52,7 @@ models = {
 	{'MF + LIN(r) (hand)', model_mf_lin_r_lin_v(struct('L', 25, 'featU', 0, 'featV', 1, 'lambdaU', 0.0316, 'lambdaV', 31.6, 'biasU', 1, 'biasV', 1, 'lambdaBU', 34))}
     {'MF + GP(r) (linear)', model_mf_gp_r_liniso(struct('L', 25))}
     {'MF + GP(r)', model_mf_gp_r_seard(struct('L', 25))}
-    {'MF + GP(r) + LIN(v)',  model_gp_vu_reg_seard(struct('L', 25, 'lambda', 200))}
+    {'MF + GP(r) + LIN(v)',  model_mf_gp_r_lin_v_seard(struct('L', 25, 'lambda', 200))}
 };
 
 n_models = size(models, 1);
